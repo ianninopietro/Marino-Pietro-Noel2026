@@ -146,6 +146,8 @@ html.js .picker{display:flex}
 }
 .person:hover .avatar,.person:focus-visible .avatar{transform:rotate(-6deg) scale(1.05)}
 .choose{gap:1.25rem}
+.pending{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif; font-size:.95rem; color:var(--muted); font-style:italic; white-space:nowrap}
+.result .btn[hidden]{display:none}
 </style>
 </head>
 <body>
@@ -168,17 +170,12 @@ html.js .picker{display:flex}
       <label class="back" for="v-home">Retour aux listes</label>
       <div class="head">
         <h1>La liste de Pietro</h1>
-        <p class="lede">Huit idées qui me feraient plaisir. Choisis-en une, ou descends tout en bas et laisse la roue choisir.</p>
+        <p class="lede">Six idées qui me feraient plaisir. Choisis-en une, ou descends tout en bas et laisse la roue choisir.</p>
       </div>
       <div class="list" data-who="pietro">
   <section>
     <h2>Pour la cuisine</h2>
     <ul>
-      <li id="torchons" data-emo="🧺" data-shop="Amazon">
-        <span class="emo" aria-hidden="true">🧺</span>
-        <div><p class="name">Set de torchons</p><p class="note">Pour la cuisine, parce qu’on n’en a jamais assez.</p></div>
-        <div class="btn-cell"><a class="btn" href="https://amzn.eu/d/0b3asVvo" target="_blank" rel="noopener">Voir sur Amazon</a></div>
-      </li>
       <li id="casseroles" data-emo="🍳" data-shop="Amazon">
         <span class="emo" aria-hidden="true">🍳</span>
         <div><p class="name">Batterie de casseroles</p><p class="note">Pour cuisiner pour de vrai dans la nouvelle maison.</p></div>
@@ -231,16 +228,6 @@ html.js .picker{display:flex}
       </li>
     </ul>
   </section>
-  <section>
-    <h2>Pour la maison</h2>
-    <ul>
-      <li id="smoke" data-emo="🚨" data-shop="Amazon">
-        <span class="emo" aria-hidden="true">🚨</span>
-        <div><p class="name">Détecteur de fumée</p><p class="note">Pas très romantique, mais c’est sans doute le cadeau le plus utile de la liste.</p></div>
-        <div class="btn-cell"><a class="btn" href="https://amzn.eu/d/035S2NOZ" target="_blank" rel="noopener">Voir sur Amazon</a></div>
-      </li>
-    </ul>
-  </section>
 </div>
       
     <div class="picker" data-for="pietro">
@@ -259,10 +246,60 @@ html.js .picker{display:flex}
       <label class="back" for="v-home">Retour aux listes</label>
       <div class="head">
         <h1>La liste de Marion</h1>
+        <p class="lede">Six idées qui me feraient plaisir. Choisis-en une, ou descends tout en bas et laisse la roue choisir.</p>
       </div>
       <div class="list" data-who="marion">
-        <p class="soon">La liste arrive bientôt.</p>
-      </div>
+  <section>
+    <h2>Pour bien se réveiller</h2>
+    <ul>
+      <li id="loftie" data-emo="⏰" data-shop="L’Avant-Gardiste">
+        <span class="emo" aria-hidden="true">⏰</span>
+        <div><p class="name">Réveil Loftie</p><p class="note">Un réveil apaisant et multifonctions, pour commencer la journée en douceur.</p></div>
+        <div class="btn-cell"><a class="btn" href="https://www.lavantgardiste.com/products/reveil-apaisant-multifonctions-loftie" target="_blank" rel="noopener">Voir sur L’Avant-Gardiste</a></div>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>Pour prendre soin de soi</h2>
+    <ul>
+      <li id="dreame" data-emo="💨" data-shop="Amazon">
+        <span class="emo" aria-hidden="true">💨</span>
+        <div><p class="name">Sèche-cheveux brosse Dreame AirStyle Pro</p><p class="note">En marron, s’il te plaît.</p></div>
+        <div class="btn-cell"><a class="btn" href="https://www.amazon.it/dp/B0GX28H8NZ?th=1" target="_blank" rel="noopener">Voir sur Amazon</a></div>
+      </li>
+      <li id="shark" data-emo="🧖‍♀️" data-shop="">
+        <span class="emo" aria-hidden="true">🧖‍♀️</span>
+        <div><p class="name">Shark Skincare FacialPro</p><p class="note">Pour un petit moment spa à la maison.</p></div>
+        <div class="btn-cell"><span class="pending">Lien à venir</span></div>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>À porter</h2>
+    <ul>
+      <li id="perles" data-emo="🦪" data-shop="">
+        <span class="emo" aria-hidden="true">🦪</span>
+        <div><p class="name">Perles monacchale</p><p class="note">Des perles, tout simplement.</p></div>
+        <div class="btn-cell"><span class="pending">Lien à venir</span></div>
+      </li>
+      <li id="pyjama" data-emo="🌙" data-shop="La Redoute">
+        <span class="emo" aria-hidden="true">🌙</span>
+        <div><p class="name">Pyjama vichy</p><p class="note">Pour les soirées d’hiver à la maison.</p></div>
+        <div class="btn-cell"><a class="btn" href="https://www.laredoute.it/ppdp/prod-351386361.aspx#searchkeyword=pijama%20vichy&amp;shoppingtool=search" target="_blank" rel="noopener">Voir sur La Redoute</a></div>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>À écouter</h2>
+    <ul>
+      <li id="vinyle" data-emo="🎶" data-shop="">
+        <span class="emo" aria-hidden="true">🎶</span>
+        <div><p class="name">Vinyle d’Olivia Dean</p><p class="note">À poser sur la platine un dimanche matin.</p></div>
+        <div class="btn-cell"><span class="pending">Lien à venir</span></div>
+      </li>
+    </ul>
+  </section>
+</div>
       
     <div class="picker" data-for="marion">
       <h2>Tu hésites&#8201;? Laisse faire la roue</h2>
@@ -290,7 +327,7 @@ document.querySelectorAll(".picker").forEach(pk => {
   const view = pk.closest(".view");
   const items = [...view.querySelectorAll(".list li")].map(li => ({
     el: li, emo: li.dataset.emo, shop: li.dataset.shop,
-    name: li.querySelector(".name").textContent, url: li.querySelector(".btn").href
+    name: li.querySelector(".name").textContent, url: (li.querySelector(".btn") || {}).href || null
   }));
   if (!items.length) { pk.remove(); return; }
   const reel = pk.querySelector(".reel"), spin = pk.querySelector(".spin");
@@ -304,7 +341,7 @@ document.querySelectorAll(".picker").forEach(pk => {
     spin.disabled = true;
     const finish = () => {
       show(pick); const it = items[pick];
-      rName.textContent = it.name; rLink.href = it.url; rLink.textContent = "Voir sur " + it.shop;
+      rName.textContent = it.name; if (it.url) { rLink.href = it.url; rLink.textContent = "Voir sur " + it.shop; rLink.hidden = false; } else { rLink.hidden = true; }
       result.classList.add("show"); it.el.classList.add("hit");
       spin.disabled = false; spin.textContent = "Relancer";
     };
